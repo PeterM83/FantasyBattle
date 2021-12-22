@@ -23,7 +23,7 @@ ABaseUnit::ABaseUnit()
 	MovementMesh = CreateDefaultSubobject<UProceduralMeshComponent>(TEXT("MeshComp"));
 	MovementMesh->bUseAsyncCooking = true;
 	MovementMesh->ContainsPhysicsTriMeshData(false);
-	MovementMesh->SetupAttachment(Root);
+	MovementMesh->AttachToComponent(RootComponent, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true));
 
 	UnitSize = FVector(100.f, 100.f, 50.f);
 	BoxCollision->SetBoxExtent(UnitSize);
@@ -35,6 +35,12 @@ void ABaseUnit::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	if (LOSMaterial)
+	{
+		LOSMaterialInstance = UMaterialInstanceDynamic::Create(LOSMaterial, this);
+		MovementMesh->SetMaterial(0, LOSMaterialInstance);
+		LOSMaterialInstance->SetVectorParameterValue("Color", LOSMaterialColor);
+	}
 }
 
 // Called every frame
@@ -55,12 +61,18 @@ void ABaseUnit::GetFrontCorners(FVector& LeftCorner, FVector& RightCorner)
 	RightCorner = UKismetMathLibrary::TransformLocation(GetActorTransform(), FVector(UnitSize.X, UnitSize.Y, -UnitSize.Z + 1));
 }
 
+void ABaseUnit::GetFrontCornersLocal(FVector& LeftCorner, FVector& RightCorner)
+{
+	LeftCorner = FVector(UnitSize.X, -UnitSize.Y, -UnitSize.Z + 1);
+	RightCorner = FVector(UnitSize.X, UnitSize.Y, -UnitSize.Z + 1);
+}
+
 void ABaseUnit::GetVertices()
 {
 	FVector LeftStart;
 	FVector RightStart;
 	int32 StartAngle = SightArc / 2;
-	GetFrontCorners(LeftStart, RightStart);
+	GetFrontCornersLocal(LeftStart, RightStart);
 	int32 HalfVertices = FMath::RoundToInt(SightArc / AngleStep) / 2;	//Get number of points in half so i can use equal numbers from both corners
 	FVector FrontRowDirection = (RightStart - LeftStart);
 	FrontRowDirection.Normalize();

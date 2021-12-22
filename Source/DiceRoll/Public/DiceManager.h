@@ -22,12 +22,6 @@ protected:
 	UPROPERTY(EditDefaultsOnly)
 		TSubclassOf<class ADice> DieClass;
 
-	UPROPERTY(EditDefaultsOnly)
-		int32 StartDices;
-
-	UPROPERTY(EditDefaultsOnly)
-		int32 RoomSize;
-
 	UPROPERTY(VisibleAnywhere)
 		UStaticMeshComponent* FloorMesh;
 
@@ -57,9 +51,27 @@ private:
 
 	void ConstructWall(UBoxComponent* Wall);
 
+	void ResetDieLocation(ADice* Die);
+
 	UFUNCTION()
 	void RecieveRollResult(ADice* Die, int32 RollResult, int32 PlayerID);
 
-	FTransform CreateDieSpawnTransform();
+	FVector CreateDieSpawnLocation();
+	FRotator CreateDieSpawnRotator();
+
+	bool RollOngoing;
+
+protected:
+
+	UPROPERTY(EditDefaultsOnly)
+		int32 StartDices;
+
+	UPROPERTY(EditDefaultsOnly)
+		int32 RoomSize;
+
+public:
+
+	UFUNCTION(BlueprintCallable)
+	bool StartRoll1Player(int PlayerID = 1, int Dices = 1);
 
 };

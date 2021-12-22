@@ -2,20 +2,18 @@
 
 using UnrealBuildTool;
 
-public class FantasyBattle : ModuleRules
+public class SpecialRules : ModuleRules
 {
-	public FantasyBattle(ReadOnlyTargetRules Target) : base(Target)
+	public SpecialRules(ReadOnlyTargetRules Target) : base(Target)
 	{
-		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "ProceduralMeshComponent", "SpecialRules" });
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore" });
 
-		PrivateDependencyModuleNames.AddRange(new string[] { "DiceRoll"});
+		PrivateDependencyModuleNames.AddRange(new string[] {  });
 
-		PrivateIncludePaths.AddRange(new string[] {  });
 		// Uncomment if you are using Slate UI
 		// PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore" });
-
+		
 		// Uncomment if you are using online features
 		// PrivateDependencyModuleNames.Add("OnlineSubsystem");
 

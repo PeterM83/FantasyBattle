@@ -29,18 +29,13 @@ public:
 	UFUNCTION(BlueprintCallable)
 		void GetFrontCorners(FVector& LeftCorner, FVector& RightCorner);
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Line of Sight")
-		float SightArc = 90;
-
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Line of Sight")
-		float AngleStep = 5;
-
-	UPROPERTY(VisibleAnywhere, BlueprintReadWrite, Category = "Line of Sight")
-		float SightRange = 1000;
+	UFUNCTION(BlueprintCallable)
+		void GetFrontCornersLocal(FVector& LeftCorner, FVector& RightCorner);
 
 private:
 
-	USceneComponent* Root;
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
+		USceneComponent* Root;
 
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 		class UBoxComponent* BoxCollision;
@@ -48,17 +43,34 @@ private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 		class UProceduralMeshComponent* MovementMesh;
 
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
-		TArray<FVector> LOSVertices;
-
-	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
-		TArray<int32> LOSTriangles;
-
 	UFUNCTION(BlueprintCallable)
 		void GetVertices();
 
 	UFUNCTION(BlueprintCallable)
 		void DrawLOSMesh();
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Line of Sight", meta = (AllowPrivateAccess = "true"))
+		TArray<FVector> LOSVertices;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Line of Sight", meta = (AllowPrivateAccess = "true"))
+		TArray<int32> LOSTriangles;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Line of Sight", meta = (AllowPrivateAccess = "true"))
+		float SightArc = 90;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Line of Sight", meta = (AllowPrivateAccess = "true"))
+		float AngleStep = 5;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Line of Sight", meta = (AllowPrivateAccess = "true"))
+		float SightRange = 1000;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Line of Sight", meta = (AllowPrivateAccess = "true"))
+		FLinearColor LOSMaterialColor;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Line of Sight", meta = (AllowPrivateAccess = "true"))
+		UMaterialInterface* LOSMaterial;
+
+		UMaterialInstanceDynamic* LOSMaterialInstance;
 
 protected:
 

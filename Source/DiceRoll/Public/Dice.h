@@ -7,6 +7,7 @@
 #include "Dice.generated.h"
 
 DECLARE_DYNAMIC_MULTICAST_DELEGATE_ThreeParams(FRollDone, ADice*, Die, int32, RollResult, int32, PlayerID);
+DECLARE_DYNAMIC_DELEGATE_OneParam(FOutofBound, ADice*, Die);
 
 UCLASS()
 class DICEROLL_API ADice : public AActor
@@ -30,7 +31,10 @@ public:
 	void SetImpulse(float NewImpulse);
 
 	UPROPERTY(BlueprintAssignable)
-	FRollDone OnRollComplete;
+		FRollDone OnRollComplete;
+
+	UPROPERTY()
+		FOutofBound OnOutofBound;
 
 protected:
 	// Called when the game starts or when spawned
@@ -47,8 +51,11 @@ private:
 	// Tick event that runs only when the Dice is moving
 	void GetRoll();
 
+	void HideDie();
+
 	class TArray<FVector> FaceNormals;
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Rolling", meta = (AllowPrivateAccess = "true"))
 	float Impulse;
 
 	bool bIsRolling;
@@ -57,6 +64,9 @@ private:
 
 	FTimerHandle RollCheck;
 
+	FTimerHandle HideTimer;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Rolling", meta = (AllowPrivateAccess = "true"))
 	FBox DiceDimensions;
 
 	UPROPERTY(VisibleAnywhere)

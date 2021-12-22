@@ -23,7 +23,7 @@ ADice::ADice()
 
 	DieMesh->SetMobility(EComponentMobility::Movable);
 
-	Impulse = 15000;
+	Impulse = 5000;
 
 	DiceDimensions = FBox(FVector(-10, -10, -10), FVector(10, 10, 10));
 }
@@ -44,12 +44,17 @@ void ADice::StartRoll(int32 OwnerID)
 {
 	if (!bIsRolling)
 	{
+		if (GetWorldTimerManager().IsTimerActive(HideTimer))
+		{
+			GetWorldTimerManager().ClearTimer(HideTimer);
+		}
+		SetActorHiddenInGame(false);
 		bIsRolling = true;
 		RollResult = 0;
 
 		PlayerID = OwnerID;
 
-		DieMesh->AddImpulseAtLocation(Impulse * FVector(0.0f, 0.0f, 1.0f), FMath::RandPointInBox(DiceDimensions));
+		DieMesh->AddImpulseAtLocation(Impulse * FVector(FMath::FRandRange(-1.f,1.f), FMath::FRandRange(-1.f, 1.f), 1.0f), FMath::RandPointInBox(DiceDimensions));
 
 		GetWorldTimerManager().SetTimer(RollCheck, this, &ADice::GetRoll, 0.1f, true);
 	}
@@ -86,6 +91,15 @@ void ADice::GetRoll()
 			}
 		}
 		GetWorldTimerManager().ClearTimer(RollCheck);
+		GetWorldTimerManager().SetTimer(HideTimer, this, &ADice::HideDie, 15.0f, true);
 		bIsRolling = false;
+
+		OnRollComplete.Broadcast(this, PlayerID, RollResult);
 	}
+}
+
+void ADice::HideDie()
+{
+	GetWorldTimerManager().ClearTimer(HideTimer);
+	SetActorHiddenInGame(true);
 }
