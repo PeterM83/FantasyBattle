@@ -44,7 +44,7 @@ public:
 		FORCEINLINE FGuid GetID() {return ID;}
 
 	UFUNCTION(BlueprintPure)
-		FORCEINLINE GetUnitRarity() {return UnitProfil.Rarity;}
+		FORCEINLINE EUnitRarity GetUnitRarity() {return UnitProfil.Rarity;}
 
 private:
 
