@@ -27,10 +27,16 @@ struct FUnitConstruction
 		float SecondaryRatio;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+		int32 MinSecondaryAntal;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
 		int32 SecondaryPoints;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
 		int32 SubProfileCount;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+		int32 SubMountProfileCount;
 };
 
 USTRUCT(BlueprintType)
@@ -38,7 +44,7 @@ struct FUnitCommandUpgrade
 {
 	GENERATED_USTRUCT_BODY()
 
-		UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
 		int32 UpgradeCost;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite)
@@ -124,7 +130,7 @@ struct FBaseUpgrade
 	GENERATED_USTRUCT_BODY()
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-		int32 UpgradeCost;
+		float UpgradeCost;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 		FText UpgradeText;
@@ -149,7 +155,7 @@ struct FEquipmentUpgrade : public FBaseUpgrade
 		TArray<EArmor> RemoveArmor;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
-		int32 UpgradeGroup;
+		TArray<int32> UpgradeGroup;
 };
 
 USTRUCT(BlueprintType)
@@ -171,6 +177,27 @@ struct FMountUpgrade : public FBaseUpgrade
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 		FName MountName;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+		int32 UpgradeGroup;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+		FName SubUnitName;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+		int32 SubUnitCount;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+		FName SubMountName;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+		int32 SubMountCount;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+		bool MustIncludeSubUpgrade;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+		bool CantIncludeSubUpgrade;
 };
 
 USTRUCT(BlueprintType)
@@ -259,6 +286,7 @@ public:
 		MainProfileName = NewProfile->MainProfileName;
 		SecondaryProfileName = NewProfile->SecondaryProfileName;
 		SubProfileName = NewProfile->SubProfileName;
+		SubMountProfileName = NewProfile->SubMountProfileName;
 		MountProfileName = NewProfile->MountProfileName;
 		CommandUpgrades = NewProfile->CommandUpgrades;
 		SubProfileUpgrades = NewProfile->SubProfileUpgrades;
@@ -273,11 +301,14 @@ struct FManProfile : public FTableRowBase
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 		FText ProfileName;
 
-	UPROPERTY(EditAnywhere, BlueprintReadOnly)
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
 		int32 Antal;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 		FManstat ProfileStats;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+		ETroopType TroopType;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 		int32 WizardLvl;
@@ -303,6 +334,12 @@ struct FManProfile : public FTableRowBase
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 		TArray<FEquipmentUpgrade> EquipmentUpgrade;
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+		TArray<FMountUpgrade> MountUpgrade;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+		TArray<FSubProfileUpgrade> SubProfileUpgrades;
+
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 		EProfilePrio Prio;
 
@@ -318,6 +355,7 @@ struct FManProfile : public FTableRowBase
 		ProfileName = NewProfile->ProfileName;
 		Antal = NewProfile->Antal;
 		ProfileStats = NewProfile->ProfileStats;
+		TroopType = NewProfile->TroopType;
 		WizardLvl = NewProfile->WizardLvl;
 		WizardLores = NewProfile->WizardLores;
 		Weapons = NewProfile->Weapons;
@@ -326,21 +364,28 @@ struct FManProfile : public FTableRowBase
 		BaseSize = NewProfile->BaseSize;
 		SpecialRuleUpgrade = NewProfile->SpecialRuleUpgrade;
 		EquipmentUpgrade = NewProfile->EquipmentUpgrade;
+		MountUpgrade = NewProfile->MountUpgrade;
+		SubProfileUpgrades = NewProfile->SubProfileUpgrades;
 		Prio = NewProfile->Prio;
 		ParentPrio = NewProfile->ParentPrio;
 	}
+
+	bool operator==(const FManProfile& B) const;
 };
 
 USTRUCT(BlueprintType)
 struct FMountProfile : public FTableRowBase
 {
-	GENERATED_USTRUCT_BODY()
+	GENERATED_BODY()
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 		FText ProfileName;
 
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 		FManstat ProfileStats;
+
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+		ETroopType TroopType;
 
 	UPROPERTY(EditAnywhere, BlueprintReadOnly)
 		TArray<ESpecialRule> SpecialRules;
@@ -363,7 +408,103 @@ struct FMountProfile : public FTableRowBase
 	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
 		TArray<FSpecialRuleUpgrade> SpecialRuleUpgrade;
 
+	UPROPERTY(EditDefaultsOnly, BlueprintReadOnly)
+		TArray<FSubProfileUpgrade> SubProfileUpgrades;
+
+	FMountProfile()
+	{
+	}
+
+	FMountProfile(FMountProfile* NewProfile)
+	{
+		ProfileName = NewProfile->ProfileName;
+		ProfileStats = NewProfile->ProfileStats;
+		TroopType = NewProfile->TroopType;
+		SpecialRules = NewProfile->SpecialRules;
+		SubProfile = NewProfile->SubProfile;
+		SubMountProfile = NewProfile->SubMountProfile;
+		SubCount = NewProfile->SubCount;
+		SubMountCount = NewProfile->SubMountCount;
+		BaseSize = NewProfile->BaseSize;
+		SpecialRuleUpgrade = NewProfile->SpecialRuleUpgrade;
+		SubProfileUpgrades = NewProfile->SubProfileUpgrades;
+
+	}
+
+	bool Equals(const FMountProfile& other) const;
+	bool operator==(const FMountProfile& other) const;
 };
+
+FORCEINLINE bool FMountProfile::Equals(const FMountProfile& other) const
+{
+	return ProfileName.ToString() == other.ProfileName.ToString();
+}
+
+FORCEINLINE bool FMountProfile::operator==(const FMountProfile& other) const
+{
+	return ProfileName.ToString() == other.ProfileName.ToString();
+}
+
+USTRUCT(BlueprintType)
+struct FSaveGameUnitProfile : public FTableRowBase
+{
+	GENERATED_BODY()
+
+public:
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		FUnitStat UnitBase;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		TArray<FText> IncludedUpgrades;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		TArray<FManProfile> Profiler;
+
+	FSaveGameUnitProfile()
+	{
+
+	}
+
+	FSaveGameUnitProfile(FUnitStat Base, TArray<FText> Upgrades, TArray<FManProfile> InProfiles)
+	{
+		UnitBase = Base;
+		IncludedUpgrades = Upgrades;
+		Profiler = InProfiles;
+	}
+
+};
+
+USTRUCT(BlueprintType)
+struct FArmyStat : public FTableRowBase
+{
+	GENERATED_BODY()
+
+public:
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		FString ArmyName;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		float ArmyValue;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		int32 ArmyTotalMax;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		EArmies ArmyType;
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite)
+		TArray<FSaveGameUnitProfile> Units;
+
+	FArmyStat()
+	{
+		ArmyValue = 0.f;
+		ArmyTotalMax = 2000;
+		ArmyType = EArmies::E_Lizardmen;
+	}
+};
+
 /**
  * 
  */
@@ -373,5 +514,11 @@ class FANTASYBATTLE_API UStructLibrary : public UObject
 	GENERATED_BODY()
 
 public:
+
+	UFUNCTION(BlueprintPure, meta = (DisplayName = "Profile == Profile", CompactNodeTitle = "==", ScriptMethod = "EqualsManProfile", ScriptOperator = "==", Keywords = "== Equals"), Category = "Math|ManProfile")
+		static bool Equals_Profile(const FManProfile& A, const FManProfile& B);
+
+	UFUNCTION(BlueprintPure, meta = (DisplayName = "Army == Army", CompactNodeTitle = "==", ScriptMethod = "EqualsArmy", ScriptOperator = "==", Keywords = "== Equals"), Category = "Math|Army")
+		static bool Equals_Army(const FArmyStat& A, const FArmyStat& B);
 
 };

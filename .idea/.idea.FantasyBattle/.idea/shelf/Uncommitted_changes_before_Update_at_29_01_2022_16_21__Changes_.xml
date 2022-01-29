@@ -1,0 +1,144 @@
+﻿<changelist name="Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]" date="1643469679665" recycled="false" toDelete="true">
+  <option name="PATH" value="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/shelved.patch" />
+  <option name="DESCRIPTION" value="Uncommitted changes before Update at 29/01/2022 16.21 [Changes]" />
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="Content/UI/PreGame/WBP_ArmyButton.uasset" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/WBP_ArmyButton.uasset" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="Content/Mode/GM_FantasyBattle_Lobby_BP.uasset" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/GM_FantasyBattle_Lobby_BP.uasset" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="Content/UI/PreGame/WBP_LoadGameLinje.uasset" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/WBP_LoadGameLinje.uasset" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Content/Blank_BuiltData.uasset" />
+    <option name="AFTER_PATH" value="Content/Blank_BuiltData.uasset" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/Blank_BuiltData.uasset" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="Content/UI/PreGame/WBP_CreateArmyInfo.uasset" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/WBP_CreateArmyInfo.uasset" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Content/Blank.umap" />
+    <option name="AFTER_PATH" value="Content/Blank.umap" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/Blank.umap" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Content/Data/Lizardmen_UnitDT.uasset" />
+    <option name="AFTER_PATH" value="Content/Data/Lizardmen_UnitDT.uasset" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/Lizardmen_UnitDT.uasset" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Content/UI/PreGame/WBP_ArmyUnit.uasset" />
+    <option name="AFTER_PATH" value="Content/UI/PreGame/WBP_ArmyUnit.uasset" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/WBP_ArmyUnit.uasset" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="Content/UI/Lobby/WBP_LobbyPlayer.uasset" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/WBP_LobbyPlayer.uasset" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Content/UI/PreGame/WBP_UpDown.uasset" />
+    <option name="AFTER_PATH" value="Content/UI/PreGame/WBP_UpDown.uasset" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/WBP_UpDown.uasset" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Content/Data/ProfileDT.uasset" />
+    <option name="AFTER_PATH" value="Content/Data/ProfileDT.uasset" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/ProfileDT.uasset" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="Content/UI/PreGame/WBP_CreateRarity.uasset" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/WBP_CreateRarity.uasset" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="Content/UI/PreGame/WBP_SaveLoadWindow.uasset" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/WBP_SaveLoadWindow.uasset" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="Content/Mode/PC_PreGame_BP.uasset" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/PC_PreGame_BP.uasset" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="Content/UI/Lobby/WBP_Lobby.uasset" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/WBP_Lobby.uasset" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Content/UI/PreGame/WBP_CreateArmyMain.uasset" />
+    <option name="AFTER_PATH" value="Content/UI/PreGame/WBP_CreateArmyMain.uasset" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/WBP_CreateArmyMain.uasset" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="Content/Maps/Lobby.umap" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/Lobby.umap" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="Content/Mode/GM_FantasyBattle_Play_BP.uasset" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/GM_FantasyBattle_Play_BP.uasset" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="Content/UI/WMP_MainMenu.uasset" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/WMP_MainMenu.uasset" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="Content/Mode/GM_FantasyBattle_PreGame.uasset" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/GM_FantasyBattle_PreGame.uasset" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="Content/Mode/GM_PreGame_BP.uasset" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/GM_PreGame_BP.uasset" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Content/UI/PreGame/WBP_CreateUpgrade.uasset" />
+    <option name="AFTER_PATH" value="Content/UI/PreGame/WBP_CreateUpgrade.uasset" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/WBP_CreateUpgrade.uasset" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="Content/UI/PreGame/WBP_SessionLinje.uasset" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/WBP_SessionLinje.uasset" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="Content/Mode/PC_Lobby_BP.uasset" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/PC_Lobby_BP.uasset" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" />
+    <option name="AFTER_PATH" value="Content/Mode/GI_FantasyBattle_BP.uasset" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/GI_FantasyBattle_BP.uasset" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Content/UI/PreGame/WBP_EditUnit.uasset" />
+    <option name="AFTER_PATH" value="Content/UI/PreGame/WBP_EditUnit.uasset" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/WBP_EditUnit.uasset" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Content/Data/MountDT.uasset" />
+    <option name="AFTER_PATH" value="Content/Data/MountDT.uasset" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/MountDT.uasset" />
+  </binary>
+  <binary>
+    <option name="BEFORE_PATH" value="Content/BP/BP_Die.uasset" />
+    <option name="AFTER_PATH" value="Content/BP/BP_Die.uasset" />
+    <option name="SHELVED_PATH" value="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/BP_Die.uasset" />
+  </binary>
+</changelist>

@@ -51,6 +51,16 @@ enum class EUnitRarity : uint8
 };
 
 UENUM(BlueprintType)
+enum class EUpgradeTypes : uint8
+{
+	E_Command UMETA(DisplayName = "CommandGroup Upgrade"),
+	E_Equipment UMETA(DisplayName = "Equipment Upgrade"),
+	E_Rule UMETA(DisplayName = "Specialrule Upgrade"),
+	E_SubUnit UMETA(DisplayName = "Sub Unit Upgrade"),
+	E_Mount UMETA(DisplayName = "Mount Upgrade")
+}; 
+
+UENUM(BlueprintType)
 enum class ETroopType : uint8
 {
 	E_Infantry UMETA(DisplayName = "Infantry"),

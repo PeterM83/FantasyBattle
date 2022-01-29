@@ -8,9 +8,9 @@ public class FantasyBattle : ModuleRules
 	{
 		PCHUsage = PCHUsageMode.UseExplicitOrSharedPCHs;
 	
-		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "ProceduralMeshComponent", "SpecialRules" });
+		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "ProceduralMeshComponent", "SpecialRules", "OnlineSubsystem", "OnlineSubsystemEOS" });
 
-		PrivateDependencyModuleNames.AddRange(new string[] { "DiceRoll"});
+		PrivateDependencyModuleNames.AddRange(new string[] { "DiceRoll", "Slate", "SlateCore"});
 
 		PrivateIncludePaths.AddRange(new string[] {  });
 		// Uncomment if you are using Slate UI
