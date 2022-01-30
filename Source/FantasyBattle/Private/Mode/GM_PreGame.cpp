@@ -145,16 +145,7 @@ void AGM_PreGame::SessionCreated(FName SessionName, bool bWasSuccessful)
 		{
 			// The player could not be registered; typically you will want to kick the player from the server in this situation.
 		}
-	
-		/*UFantasyBattle_GI* GI = Cast<UFantasyBattle_GI>(GetGameInstance());
-		if (GI)
-		{
-			UE_LOG(LogTemp, Warning, TEXT("So we Set the unique Net ID from session to hosting player: %s"), *UniqueNetId->ToString());
-			FString UserName = GI->FindUserInfo(UniqueNetId.ToSharedRef());
-			UE_LOG(LogTemp, Warning, TEXT("Did we find a username? %s"), *UserName);
-			PlayerController->PlayerState->SetUniqueId(UniqueNetId);
-			PlayerController->PlayerState->SetPlayerName(UserName);
-		}*/
+		
 		APC_FantasyBattle_PreGame* PC = Cast<APC_FantasyBattle_PreGame>(PlayerController);
 		if (PC)
 		{
@@ -163,6 +154,18 @@ void AGM_PreGame::SessionCreated(FName SessionName, bool bWasSuccessful)
 		}
 	}
 	this->bAllExistingPlayersRegistered = true;
+}
+
+void AGM_PreGame::StartGame()
+{
+	UFantasyBattle_GI* GI = Cast<UFantasyBattle_GI>(GetGameInstance());
+	if (GI == nullptr) return;
+
+	UWorld* World = GetWorld();
+	if (!ensure(World != nullptr)) return;
+
+	bUseSeamlessTravel = true;
+	World->ServerTravel("/Game/Maps/Gamelvl?listen");
 }
 
 

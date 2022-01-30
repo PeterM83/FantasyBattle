@@ -24,18 +24,20 @@ public:
 	UFUNCTION(BlueprintPure)
 	FORCEINLINE int32 GetMaxArmySize() {return MaxArmySize;}
 
-protected:
+	UFUNCTION(BlueprintPure)
+	FORCEINLINE int32 GetTimeToGameStart() {return TimeToGameStart;}	
 
-	void GameStarting();
-	
+protected:
+		
 	UPROPERTY(EditDefaultsOnly, ReplicatedUsing=OnRep_TimeToGameStartChanged)
-	uint32 TimeToGameStart = 10;
+	uint32 TimeToGameStart = 5;
 	
 	UPROPERTY(EditDefaultsOnly, ReplicatedUsing = OnRep_MaxArmySizeChanged)
 	int32 MaxArmySize = 1500;
 	
 private:
-
+	void PrepareForGameStart();
+	
 	bool IsEveryoneReady();
 
 	UFUNCTION()

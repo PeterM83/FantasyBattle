@@ -23,11 +23,20 @@ ABaseUnit::ABaseUnit()
 	MovementMesh = CreateDefaultSubobject<UProceduralMeshComponent>(TEXT("MeshComp"));
 	MovementMesh->bUseAsyncCooking = true;
 	MovementMesh->ContainsPhysicsTriMeshData(false);
-	MovementMesh->AttachToComponent(RootComponent, FAttachmentTransformRules(EAttachmentRule::SnapToTarget, true));
+	MovementMesh->SetupAttachment(RootComponent);
 
 	UnitSize = FVector(100.f, 100.f, 50.f);
 	BoxCollision->SetBoxExtent(UnitSize);
 	FrontRow = 4;
+}
+
+void ABaseUnit::InitUnit_Implementation(FSaveGameUnitProfile UnitStruct, int32 ParentPlayerID)
+{
+}
+
+bool ABaseUnit::InitUnit_Validate(FSaveGameUnitProfile UnitStruct, int32 ParentPlayerID)
+{
+	return true;
 }
 
 // Called when the game starts or when spawned

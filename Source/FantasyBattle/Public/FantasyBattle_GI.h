@@ -66,6 +66,9 @@ public:
 	//~Widgets Start
 	UFUNCTION(BlueprintCallable)
 	UUI_LobbyMenu* ShowLobbyMenu();
+
+	UFUNCTION(BlueprintCallable)
+	UUserWidget* ShowPlayMenu();
 		
 	UFUNCTION(BlueprintCallable)
 	void ShowMainMenu();
@@ -86,6 +89,9 @@ protected:
 	UPROPERTY(EditDefaultsOnly)
 	TSubclassOf<UUserWidget> CreateArmyMenuClass;
 
+	UPROPERTY(EditDefaultsOnly)
+	TSubclassOf<UUserWidget> PlayMenuClass;
+	
 	UPROPERTY()
 	UUI_MainMenu* MainMenu;
 
@@ -94,6 +100,9 @@ protected:
 
 	UPROPERTY()
 	UUserWidget* CreateMenu;
+
+	UPROPERTY()
+	UUserWidget* PlayMenu;
 	
 	//~ Widgets End
 	//~ OnlineSubsystem Variables/Functions
@@ -165,5 +174,8 @@ public:
 	bool OverwriteArmy(FArmyStat Army, int32 Index, FString ErrorStr);
 
 	TArray<FArmyStat> GetSaveGameList();
+//~ SaveGame
+	FLinearColor OwnColor;
+	FLinearColor EnemyColor;
 };
 

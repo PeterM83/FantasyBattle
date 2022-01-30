@@ -28,17 +28,25 @@ public:
 		TMap<EProfilePrio, FManProfile> Profiler;
 
 	//If overriden either add the profile to Profiler or make the call to parent!
-	UFUNCTION(BlueprintNativeEvent)
+	UFUNCTION(BlueprintNativeEvent, BlueprintCallable)
 		void AddProfile(const EProfilePrio Prio, const FManProfile Profil);
 
 	//Called when all Profiles have been loaded
 	UFUNCTION(BlueprintImplementableEvent, meta=(DisplayName ="OnProfilesLoaded"))
 		void ProfilesLoaded();
 
+	//Called when all Profiles have been loaded from a Savegame
+	UFUNCTION(BlueprintImplementableEvent, meta = (DisplayName = "OnProfilesLoadedFromSave"))
+		void ProfilesLoadedFromSave(const TArray<FText>& IncludedUpgrades);
+
 	/*Called when Unitvalue Changes
 	@Diffrence is the amount the new value change */
 	UFUNCTION(BlueprintImplementableEvent, meta = (DisplayName = "OnUnitValueChanged"))
-		void UnitValueChanged(int32 Diffrence);
+		void UnitValueChanged(float Diffrence, EUnitRarity Rarity);
+
+	/* Called when the number of units change*/
+	UFUNCTION(BlueprintImplementableEvent, meta = (DisplayName = "OnUnitAntalChanged"))
+		void UnitAntalChanged(int32 NewAntal, EProfilePrio Prio);
 
 	UFUNCTION(BlueprintPure)
 		FORCEINLINE FGuid GetID() {return ID;}
@@ -48,11 +56,11 @@ public:
 
 private:
 
-	UPROPERTY(BlueprintReadWrite, Category = "Unit", meta=(AllowPrivateAccess = "true"))
-		int32 UnitValue;
+	UPROPERTY(BlueprintReadOnly, Category = "Unit", meta=(AllowPrivateAccess = "true"))
+		float UnitValue;
 
-	UPROPERTY(BlueprintReadWrite, Category = "Unit", meta = (AllowPrivateAccess = "true"))
-		int32 StaticExtraPoints;
+	UPROPERTY(BlueprintReadOnly, Category = "Unit", meta = (AllowPrivateAccess = "true"))
+		float StaticExtraPoints;
 
 		void RecalcUnitValue();
 
@@ -61,9 +69,20 @@ protected:
 	UFUNCTION(BlueprintCallable)
 		void AddAntal(EProfilePrio Prio, int32 NewAntal);
 
+	UFUNCTION(BlueprintCallable)
+		void AddStaticExtraValue(float AddValue);
+
+	UFUNCTION(BlueprintCallable)
+		void ChangeProfileCost(EProfilePrio Prio, float ExtraValue);
+
+	UFUNCTION(BlueprintCallable)
+		void RemoveProfile(EProfilePrio Prio);
+
+	UFUNCTION(BlueprintCallable)
+		TMap<EProfilePrio, FManProfile> LoadProfiles(const FMountUpgrade MountUpgrade, class UDataTable* ProfilData, EProfilePrio Parent);
+
 private:
 
-	UPROPERTY(BlueprintReadWrite, Category = "Identify", meta = (AllowPrivateAccess = "true"))
 		FGuid ID;
 	
 };

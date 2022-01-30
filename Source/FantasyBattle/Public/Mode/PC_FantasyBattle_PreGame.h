@@ -31,8 +31,14 @@ public:
 	virtual void SetArmy(int32 ArrayIndex) override;
 	void UpdateCountDownTimer(int32 TimeLeft);
 
-private:
+	UFUNCTION(Client, Reliable)
+	void C_GameStarting();
+	
+	UFUNCTION(Client, Reliable)
+	void C_PrepareForGameStart();
 
+private:
+	
 	UPROPERTY()
 	UUI_LobbyMenu* LobbyMenuPtr;
 

@@ -16,8 +16,8 @@ class FANTASYBATTLE_API APS_PreGame : public APlayerState
 	GENERATED_BODY()
 
 public:
-	UFUNCTION()
-	void SetIsReady(bool NewValue);
+	UFUNCTION(Server, Reliable)
+	void S_SetIsReady(bool NewValue);
 
 	UFUNCTION(BlueprintPure)
 	FORCEINLINE bool GetIsReady() const {return bIsReady;}
@@ -37,4 +37,8 @@ private:
 	FArmyStat SelectedArmy;
 
 	virtual void GetLifetimeReplicatedProps(TArray< FLifetimeProperty > & OutLifetimeProps) const override;
+
+protected:
+	
+	virtual void CopyProperties(APlayerState* PlayerState) override;
 };

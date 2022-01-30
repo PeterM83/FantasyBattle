@@ -3,6 +3,7 @@
 
 #include "Mode/GS_PreGame.h"
 
+#include "Mode/GM_PreGame.h"
 #include "Mode/PC_FantasyBattle_PreGame.h"
 #include "Mode/PS_PreGame.h"
 #include "Net/UnrealNetwork.h"
@@ -11,14 +12,23 @@ void AGS_PreGame::RunReadyCheck()
 {
 	if (IsEveryoneReady())
 	{
-		GameStarting();
+		PrepareForGameStart();
 		GetWorldTimerManager().SetTimer(GameStartDelay, this, &AGS_PreGame::CountDown, 1.0f, true);
 		UE_LOG(LogTemp, Warning, TEXT("Every1 is Ready"));
 	}
 }
 
-void AGS_PreGame::GameStarting()
+void AGS_PreGame::PrepareForGameStart()
 {
+	for (APlayerState* PS : PlayerArray)
+	{
+		APC_FantasyBattle_PreGame* PC = Cast<APC_FantasyBattle_PreGame>(PS->GetOwner());
+		if (PC)
+		{
+			PC->C_PrepareForGameStart();
+			UE_LOG(LogTemp, Warning, TEXT("prepare for start called"));
+		}
+	}
 }
 
 bool AGS_PreGame::IsEveryoneReady()
@@ -39,6 +49,28 @@ bool AGS_PreGame::IsEveryoneReady()
 
 void AGS_PreGame::CountDown()
 {
+	TimeToGameStart--;
+	if (!IsRunningDedicatedServer())
+	{
+		OnRep_TimeToGameStartChanged();
+	}
+	if (TimeToGameStart == 0)
+	{
+		GetWorldTimerManager().ClearTimer(GameStartDelay);
+		for (APlayerState* PS : PlayerArray)
+		{
+			APC_FantasyBattle_PreGame* LobbyPC = Cast<APC_FantasyBattle_PreGame>(PS->GetOwner());
+			if (LobbyPC)
+			{
+				LobbyPC->C_GameStarting();
+			}
+		}
+		AGM_PreGame* GM = Cast<AGM_PreGame>(GetWorld()->GetAuthGameMode());
+		if (GM)
+		{
+			GM->StartGame();
+		}
+	}
 }
 
 void AGS_PreGame::OnRep_TimeToGameStartChanged()

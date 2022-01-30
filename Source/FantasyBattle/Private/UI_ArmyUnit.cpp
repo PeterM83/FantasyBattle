@@ -2,6 +2,7 @@
 
 
 #include "UI_ArmyUnit.h"
+#include "Engine/DataTable.h"
 
 bool UUI_ArmyUnit::Initialize()
 {
@@ -23,6 +24,7 @@ void UUI_ArmyUnit::AddProfile_Implementation(const EProfilePrio Prio, const FMan
 		RecalcUnitValue();
 }
 
+
 void UUI_ArmyUnit::RecalcUnitValue()
 {
 	float tempValue = (Profiler[EProfilePrio::E_Main].Antal * UnitProfil.ConstructionsValues.Points) + StaticExtraPoints;
@@ -32,9 +34,9 @@ void UUI_ArmyUnit::RecalcUnitValue()
 	}
 	if (tempValue != UnitValue)
 	{
-		int32 Diffrence = tempValue - UnitValue;
+		float Diffrence = tempValue - UnitValue;
 		UnitValue = tempValue;
-		UnitValueChanged(Diffrence);
+		UnitValueChanged(Diffrence, UnitProfil.Rarity);
 	}
 }
 
@@ -43,5 +45,70 @@ void UUI_ArmyUnit::AddAntal(EProfilePrio Prio, int32 NewAntal)
 	if (Profiler[Prio].Antal == NewAntal) return;
 
 	Profiler[Prio].Antal = NewAntal;
+	UnitAntalChanged(NewAntal, Prio);
 	RecalcUnitValue();
+}
+
+void UUI_ArmyUnit::AddStaticExtraValue(float AddValue)
+{
+	StaticExtraPoints += AddValue;
+
+	RecalcUnitValue();
+}
+
+void UUI_ArmyUnit::ChangeProfileCost(EProfilePrio Prio, float ExtraValue)
+{
+	if (Prio == EProfilePrio::E_Main)
+	{
+		UnitProfil.ConstructionsValues.Points += ExtraValue;
+	}
+	else if (Prio == EProfilePrio::E_Secondary)
+	{
+		UnitProfil.ConstructionsValues.SecondaryPoints += ExtraValue;
+	}
+	RecalcUnitValue();
+}
+
+void UUI_ArmyUnit::RemoveProfile(EProfilePrio Prio)
+{
+	Profiler.Remove(Prio);
+}
+
+TMap<EProfilePrio, FManProfile> UUI_ArmyUnit::LoadProfiles(const FMountUpgrade MountUpgrade, UDataTable* ProfilData, EProfilePrio Parent)
+{
+	TMap<EProfilePrio, FManProfile> tempProfiler;
+
+	FManProfile MountProfile = ProfilData->FindRow<FManProfile>(MountUpgrade.MountName, FString(""));
+	if (!MountProfile.ProfileName.IsEmpty())
+	{
+		MountProfile.Prio = EProfilePrio::E_Mount;
+		MountProfile.ParentPrio = EProfilePrio::E_Main;
+		tempProfiler.Add(EProfilePrio::E_Mount, MountProfile);
+	}
+
+	if (!MountUpgrade.SubUnitName.IsNone())
+	{
+		FManProfile SubProfile = ProfilData->FindRow<FManProfile>(MountUpgrade.SubUnitName, FString(""));
+		if (!SubProfile.ProfileName.IsEmpty())
+		{
+			SubProfile.Prio = EProfilePrio::E_Sub;
+			SubProfile.ParentPrio = EProfilePrio::E_Mount;
+			SubProfile.Antal = MountUpgrade.SubUnitCount;
+			tempProfiler.Add(EProfilePrio::E_Sub, SubProfile);
+		}
+	}
+
+	if (!MountUpgrade.SubMountName.IsNone())
+	{
+		FManProfile SubMountProfile = ProfilData->FindRow<FManProfile>(MountUpgrade.SubMountName, FString(""));
+		if (!SubMountProfile.ProfileName.IsEmpty())
+		{
+			SubMountProfile.Prio = EProfilePrio::E_SubMount;
+			SubMountProfile.ParentPrio = EProfilePrio::E_Mount;
+			SubMountProfile.Antal = MountUpgrade.SubMountCount;
+			tempProfiler.Add(EProfilePrio::E_SubMount, SubMountProfile);
+		}
+	}
+
+	return tempProfiler;
 }

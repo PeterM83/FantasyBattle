@@ -45,6 +45,16 @@ void UUI_LobbyMenu::SetLobbyInterface(ILobbyInterface* Interface)
 	LobbyInterface = Interface;
 }
 
+void UUI_LobbyMenu::CountDownToGameStart(int32 TimeLeft)
+{
+	if (CountDown_Text)
+		CountDown_Text->SetText(FText::AsNumber(TimeLeft));
+}
+
+void UUI_LobbyMenu::PrepareForGameStart_Implementation()
+{
+}
+
 void UUI_LobbyMenu::UpdateReadyBtnText()
 {
 	if (bIsReady)
@@ -62,7 +72,7 @@ void UUI_LobbyMenu::UpdateReadyBtnText()
 void UUI_LobbyMenu::ReadyClick()
 {
 	bIsReady = !bIsReady;
-	UpdateReadyState(bIsReady, ParentID);
+	UpdateReadyBtnText();
 	
 	if (LobbyInterface)
 		LobbyInterface->SetIsReady(bIsReady);
@@ -73,4 +83,5 @@ void UUI_LobbyMenu::ArmySelectionChanged(FString SelectedItem, ESelectInfo::Type
 	if (LobbyInterface)
 		LobbyInterface->SetArmy(Armies_Combo->FindOptionIndex(SelectedItem));
 }
+
 

@@ -24,6 +24,7 @@ public:
 	
 	UFUNCTION()
 	void SessionCreated(FName SessionName, bool bWasSuccessful);
+	void StartGame();
 private:
 
 

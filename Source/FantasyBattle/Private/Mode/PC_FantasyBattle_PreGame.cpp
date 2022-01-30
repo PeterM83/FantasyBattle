@@ -36,7 +36,7 @@ void APC_FantasyBattle_PreGame::SetIsReady(bool newValue)
 	APS_PreGame* PS = Cast<APS_PreGame>(PlayerState);
 	if (PS)
 	{
-		PS->SetIsReady(newValue);
+		PS->S_SetIsReady(newValue);
 	}
 }
 
@@ -47,7 +47,23 @@ void APC_FantasyBattle_PreGame::SetArmy(int32 ArrayIndex)
 
 void APC_FantasyBattle_PreGame::UpdateCountDownTimer(int32 TimeLeft)
 {
-	
+	if (!LobbyMenuPtr || TimeLeft == 0) return;
+	if (TimeLeft == 1)
+	{
+		LobbyMenuPtr->PrepareForGameStart();
+	}
+	LobbyMenuPtr->CountDownToGameStart(TimeLeft);
+}
+
+void APC_FantasyBattle_PreGame::C_PrepareForGameStart_Implementation()
+{
+
+}
+
+void APC_FantasyBattle_PreGame::C_GameStarting_Implementation()
+{
+	if (LobbyMenuPtr)
+		LobbyMenuPtr->RemoveFromViewport();
 }
 
 void APC_FantasyBattle_PreGame::NewPlayerJoined_Implementation(const FUniqueNetIdRepl& PlayerID)
@@ -69,6 +85,7 @@ void APC_FantasyBattle_PreGame::WaitingForPS()
 		AGS_PreGame* GS = GetWorld()->GetGameState<AGS_PreGame>();
 		if (GS)
 		{
+			LobbyMenuPtr->SetupArmyInfo(GS->GetMaxArmySize(), AvailableArmies);
 			for (APlayerState* PS : GS->PlayerArray)
 			{
 				if (PS->GetPlayerId() != PlayerState->GetPlayerId())

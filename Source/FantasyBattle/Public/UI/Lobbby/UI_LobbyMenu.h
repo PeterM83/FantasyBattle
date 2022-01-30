@@ -33,6 +33,11 @@ public:
 	void CreatePlayerWidget(const FString& PlayerName, const int32 PlayerID);
 
 	void SetLobbyInterface(ILobbyInterface* Interface);
+	
+	void CountDownToGameStart(int32 TimeLeft);
+
+	UFUNCTION(BlueprintNativeEvent)
+	void PrepareForGameStart();
 
 protected:
 
@@ -59,7 +64,9 @@ protected:
 	
 	UPROPERTY(VisibleAnywhere, meta = (BindWidget), Category="Component")
 	UBackgroundBlur* BG_Blur;
-
+	
+	UPROPERTY(VisibleAnywhere, meta = (BindWidget), Category="Component")
+	UTextBlock* CountDown_Text;
 private:
 	ILobbyInterface* LobbyInterface;
 
@@ -73,6 +80,5 @@ private:
 	
 	UFUNCTION()
 	void ArmySelectionChanged(FString SelectedItem, ESelectInfo::Type SelectionType);
-	
 	
 };

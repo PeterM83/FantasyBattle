@@ -23,6 +23,9 @@ UFantasyBattle_GI::UFantasyBattle_GI()
 {
 	bIsLoggedIn = false;
 	bInSession = false;
+
+	OwnColor = FLinearColor::Green;
+	EnemyColor = FLinearColor::Red;
 }
 
 void UFantasyBattle_GI::Init()
@@ -56,6 +59,28 @@ UUI_LobbyMenu* UFantasyBattle_GI::ShowLobbyMenu()
 			//MainMenu->SetMenuInterface(this);
 			LobbyMenu->AddToViewport();
 			return  LobbyMenu;
+		}
+	
+	}
+	return nullptr;
+}
+
+UUserWidget* UFantasyBattle_GI::ShowPlayMenu()
+{
+	if (PlayMenu)
+	{
+		LobbyMenu->AddToViewport();
+		return  PlayMenu;
+	}
+	else
+	{
+		if (!ensureAlways(LobbyMenuClass)) return nullptr;
+		PlayMenu = CreateWidget<UUserWidget>(this, PlayMenuClass);
+		if (PlayMenu)
+		{
+			//MainMenu->SetMenuInterface(this);
+			PlayMenu->AddToViewport();
+			return  PlayMenu;
 		}
 	
 	}

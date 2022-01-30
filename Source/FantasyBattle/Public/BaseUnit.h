@@ -3,6 +3,7 @@
 #pragma once
 
 #include "CoreMinimal.h"
+#include "StructLibrary.h"
 #include "GameFramework/Actor.h"
 #include "BaseUnit.generated.h"
 
@@ -15,6 +16,9 @@ public:
 	// Sets default values for this actor's properties
 	ABaseUnit();
 
+	UFUNCTION(BlueprintCallable, Server, Reliable, WithValidation)
+	void InitUnit(FSaveGameUnitProfile UnitStruct, int32 ParentPlayerID);
+	
 protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;

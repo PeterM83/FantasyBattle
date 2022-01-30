@@ -64,154 +64,43 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="856f5dbc-e0b1-4a50-92d0-7b3388587444" name="Changes" comment="Pregame fixes">
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/indexLayout.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/projectSettingsUpdater.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/BP_Die.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/Blank.umap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/Blank_BuiltData.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/GI_FantasyBattle_BP.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/GM_FantasyBattle_Lobby_BP.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/GM_FantasyBattle_Play_BP.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/GM_FantasyBattle_PreGame.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/GM_PreGame_BP.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/Lizardmen_UnitDT.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/Lobby.umap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/MountDT.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/PC_Lobby_BP.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/PC_PreGame_BP.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/ProfileDT.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/WBP_ArmyButton.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/WBP_ArmyUnit.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/WBP_CreateArmyInfo.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/WBP_CreateArmyMain.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/WBP_CreateRarity.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/WBP_CreateUpgrade.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/WBP_EditUnit.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/WBP_LoadGameLinje.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/WBP_Lobby.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/WBP_LobbyPlayer.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/WBP_SaveLoadWindow.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/WBP_SessionLinje.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/WBP_UpDown.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/WMP_MainMenu.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21_[Changes]/shelved.patch" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21__Changes_.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Config/DefaultInput.ini" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/Maps/Lobby.umap" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/Lobby/WBP_Lobby.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/Lobby/WBP_LobbyPlayer.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/PreGame/WBP_SessionLinje.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Content/UI/WMP_MainMenu.uasset" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/FantasyBattle.sln.DotSettings.user" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/OnlineSubsystemEOS.uplugin" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/ReadMe.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/OnlineSubsystemEOS.Build.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/Android/AndroidEOSHelpers.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/EOSHelpers.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/EOSHelpers.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/EOSSettings.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/IOS/IOSEOSHelpers.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/IOS/IOSEOSHelpers.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/InternetAddrEOS.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/InternetAddrEOS.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/Mac/MacEOSHelpers.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/NboSerializerEOS.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/NetConnectionEOS.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/NetConnectionEOS.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/NetDriverEOS.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/NetDriverEOS.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/OnlineAchievementsEOS.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/OnlineAchievementsEOS.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/OnlineLeaderboardsEOS.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/OnlineLeaderboardsEOS.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/OnlineSessionEOS.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/OnlineSessionEOS.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/OnlineStatsEOS.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/OnlineStatsEOS.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/OnlineStoreEOS.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/OnlineStoreEOS.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/OnlineSubsystemEOS.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/OnlineSubsystemEOSPrivate.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/OnlineSubsystemEOSTypes.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/OnlineSubsystemModuleEOS.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/OnlineTitleFileEOS.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/OnlineTitleFileEOS.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/OnlineUserCloudEOS.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/OnlineUserCloudEOS.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/SocketEOS.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/SocketEOS.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/SocketSubsystemEOS.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/SocketSubsystemEOS.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/UserManagerEOS.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/UserManagerEOS.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/Windows/WindowsEOSHelpers.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Private/Windows/WindowsEOSHelpers.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Public/EOSSettings.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Public/OnlineSubsystemEOS.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Public/OnlineSubsystemEOSModule.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOS/Public/OnlineSubsystemEOSPackage.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOSPlus/OnlineSubsystemEOSPlus.Build.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOSPlus/Private/OnlineAchievementsEOSPlus.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOSPlus/Private/OnlineAchievementsEOSPlus.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOSPlus/Private/OnlineExternalUIEOSPlus.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOSPlus/Private/OnlineExternalUIEOSPlus.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOSPlus/Private/OnlineLeaderboardsEOSPlus.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOSPlus/Private/OnlineLeaderboardsEOSPlus.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOSPlus/Private/OnlineSessionEOSPlus.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOSPlus/Private/OnlineSessionEOSPlus.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOSPlus/Private/OnlineStatsEOSPlus.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOSPlus/Private/OnlineStatsEOSPlus.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOSPlus/Private/OnlineStoreEOSPlus.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOSPlus/Private/OnlineStoreEOSPlus.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOSPlus/Private/OnlineSubsystemEOSPlus.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOSPlus/Private/OnlineSubsystemEOSPlus.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOSPlus/Private/OnlineSubsystemEOSPlusPrivate.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOSPlus/Private/OnlineSubsystemModuleEOSPlus.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOSPlus/Private/OnlineTitleFileEOSPlus.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOSPlus/Private/OnlineTitleFileEOSPlus.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOSPlus/Private/OnlineUserCloudEOSPlus.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOSPlus/Private/OnlineUserCloudEOSPlus.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOSPlus/Private/OnlineUserEOSPlus.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOSPlus/Private/OnlineUserEOSPlus.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOSPlus/Private/OnlineVoiceEOSPlus.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOSPlus/Private/OnlineVoiceEOSPlus.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOSPlus/Public/OnlineSubsystemEOSPlusModule.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plugins/OnlineSubsystemEOS/Source/OnlineSubsystemEOSPlus/Public/OnlineSubsystemEOSPlusPackage.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/FantasyBattle/Private/ArmySaveGame.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/FantasyBattle/Private/FantasyBattle_GI.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/FantasyBattle/Private/Interfaces/LobbyInterface.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/FantasyBattle/Private/Mode/GM_FantasyBattle_Play.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/FantasyBattle/Private/Mode/GM_PreGame.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/FantasyBattle/Private/Mode/GS_FantasyBattle_Play.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/FantasyBattle/Private/Mode/GS_PreGame.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/FantasyBattle/Private/Mode/GameSession_FantasyBattle.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/FantasyBattle/Private/Mode/PC_FantasyBattle_PreGame.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/FantasyBattle/Private/Mode/PS_PreGame.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/FantasyBattle/Private/UI/Lobbby/UI_LobbyMenu.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/FantasyBattle/Private/UI/PreGame/UI_GS_PreGame.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/FantasyBattle/Private/UI/PreGame/UI_MainMenu.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/FantasyBattle/Public/ArmySaveGame.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/FantasyBattle/Public/FantasyBattle_GI.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/FantasyBattle/Public/Interfaces/LobbyInterface.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/FantasyBattle/Public/Mode/GM_FantasyBattle_Play.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/FantasyBattle/Public/Mode/GM_PreGame.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/FantasyBattle/Public/Mode/GS_FantasyBattle_Play.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/FantasyBattle/Public/Mode/GS_PreGame.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/FantasyBattle/Public/Mode/GameSession_FantasyBattle.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/FantasyBattle/Public/Mode/PC_FantasyBattle_PreGame.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/FantasyBattle/Public/Mode/PS_PreGame.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/FantasyBattle/Public/UI/Lobbby/UI_LobbyMenu.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/FantasyBattle/Public/UI/PreGame/UI_GS_PreGame.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Source/FantasyBattle/Public/UI/PreGame/UI_MainMenu.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Config/DefaultEngine.ini" beforeDir="false" afterPath="$PROJECT_DIR$/Config/DefaultEngine.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/FantasyBattle.uproject" beforeDir="false" afterPath="$PROJECT_DIR$/FantasyBattle.uproject" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/FantasyBattle/FantasyBattle.Build.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Source/FantasyBattle/FantasyBattle.Build.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/FantasyBattle/Private/StructLibrary.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/FantasyBattle/Private/StructLibrary.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/FantasyBattle/Public/EnumLibrary.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/FantasyBattle/Public/EnumLibrary.h" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Source/FantasyBattle/Public/StructLibrary.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/FantasyBattle/Public/StructLibrary.h" afterDir="false" />
+    <list default="true" id="856f5dbc-e0b1-4a50-92d0-7b3388587444" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21__Changes_.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/shelf/Uncommitted_changes_before_Update_at_29_01_2022_16_21__Changes_.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.FantasyBattle/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blank.umap" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Blank_BuiltData.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Maps/Lobby.umap" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Maps/Lobby.umap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Mode/GI_FantasyBattle_BP.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Mode/GI_FantasyBattle_BP.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Mode/GM_FantasyBattle_Lobby_BP.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Mode/GM_FantasyBattle_Play_BP.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Mode/GM_FantasyBattle_Play_BP.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Mode/GM_FantasyBattle_PreGame.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Mode/GM_FantasyBattle_PreGame.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Mode/GM_PreGame_BP.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/Mode/GM_PreGame_BP.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Mode/PC_Lobby_BP.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/Mode/PC_PreGame_BP.uasset" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/Lobby/WBP_Lobby.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/Lobby/WBP_Lobby.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/Lobby/WBP_LobbyPlayer.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/Lobby/WBP_LobbyPlayer.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/PreGame/WBP_ArmyUnit.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/PreGame/WBP_ArmyUnit.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Content/UI/PreGame/WBP_CreateUpgrade.uasset" beforeDir="false" afterPath="$PROJECT_DIR$/Content/UI/PreGame/WBP_CreateUpgrade.uasset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/FantasyBattle/Private/BaseUnit.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/FantasyBattle/Private/BaseUnit.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/FantasyBattle/Private/FantasyBattle_GI.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/FantasyBattle/Private/FantasyBattle_GI.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/FantasyBattle/Private/Mode/GM_FantasyBattle_Play.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/FantasyBattle/Private/Mode/GM_Play.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/FantasyBattle/Private/Mode/GM_PreGame.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/FantasyBattle/Private/Mode/GM_PreGame.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/FantasyBattle/Private/Mode/GS_FantasyBattle_Play.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/FantasyBattle/Private/Mode/GS_Play.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/FantasyBattle/Private/Mode/GS_PreGame.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/FantasyBattle/Private/Mode/GS_PreGame.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/FantasyBattle/Private/Mode/PC_FantasyBattle_PreGame.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/FantasyBattle/Private/Mode/PC_FantasyBattle_PreGame.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/FantasyBattle/Private/Mode/PS_PreGame.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/FantasyBattle/Private/Mode/PS_PreGame.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/FantasyBattle/Private/UI/Lobbby/UI_LobbyMenu.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/FantasyBattle/Private/UI/Lobbby/UI_LobbyMenu.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/FantasyBattle/Private/UI_ArmyUnit.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/Source/FantasyBattle/Private/UI_ArmyUnit.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/FantasyBattle/Public/BaseUnit.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/FantasyBattle/Public/BaseUnit.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/FantasyBattle/Public/FantasyBattle_GI.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/FantasyBattle/Public/FantasyBattle_GI.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/FantasyBattle/Public/Mode/GM_FantasyBattle_Play.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/FantasyBattle/Public/Mode/GM_Play.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/FantasyBattle/Public/Mode/GM_PreGame.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/FantasyBattle/Public/Mode/GM_PreGame.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/FantasyBattle/Public/Mode/GS_FantasyBattle_Play.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/FantasyBattle/Public/Mode/GS_Play.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/FantasyBattle/Public/Mode/GS_PreGame.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/FantasyBattle/Public/Mode/GS_PreGame.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/FantasyBattle/Public/Mode/PC_FantasyBattle_PreGame.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/FantasyBattle/Public/Mode/PC_FantasyBattle_PreGame.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/FantasyBattle/Public/Mode/PS_PreGame.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/FantasyBattle/Public/Mode/PS_PreGame.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/FantasyBattle/Public/UI/Lobbby/UI_LobbyMenu.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/FantasyBattle/Public/UI/Lobbby/UI_LobbyMenu.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Source/FantasyBattle/Public/UI_ArmyUnit.h" beforeDir="false" afterPath="$PROJECT_DIR$/Source/FantasyBattle/Public/UI_ArmyUnit.h" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -236,11 +125,11 @@
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/WerApi.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.30.30705/include/stdbool.h" root0="SKIP_HIGHLIGHTING" />
-    <setting file="file://$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/FantasyBattle/FantasyBattle_GI.gen.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/FantasyBattle/UI_MainMenu.gen.cpp" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/FantasyBattle/UI_LobbyMenu.gen.cpp" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://C:/Program Files/Microsoft Visual Studio/2022/Community/VC/Tools/MSVC/14.30.30705/include/stdbool.h" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://C:/Program Files (x86)/Windows Kits/10/Include/10.0.19041.0/um/winnt.h" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Intermediate/Build/Win64/UnrealEditor/Inc/FantasyBattle/FantasyBattle_GI.gen.cpp" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -21528,7 +21417,8 @@
       <workItem from="1643297559891" duration="13420000" />
       <workItem from="1643399398136" duration="99000" />
       <workItem from="1643399588452" duration="4154000" />
-      <workItem from="1643447645245" duration="9321000" />
+      <workItem from="1643447645245" duration="28755000" />
+      <workItem from="1643529026018" duration="33070000" />
     </task>
     <servers />
   </component>
@@ -21571,7 +21461,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="HEAD" />
+                        <option value="master" />
                       </list>
                     </value>
                   </entry>
